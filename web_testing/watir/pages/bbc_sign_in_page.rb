@@ -9,6 +9,7 @@ class BbcSignInPage
 		@password_input_name = 'password'
 		@button_id = 'submit-button'
 		@form_error_class = 'form-message--error'
+		@need_help_text = 'Need help signing in?'
 	end
 
 	# go to the sign in page
@@ -49,6 +50,11 @@ class BbcSignInPage
 	# sign in error classifier object on page
 	def sign_in_error
 		@browser.div(class: @form_error_class)
+	end
+
+	# need help signing in link object
+	def need_help_link
+		@browser.span(text: @need_help_text)
 	end
 
 end
